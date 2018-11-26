@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
+    <!--[if lte IE 9]><script>alert("您正在使用的浏览器版本过低，为了您的最佳体验，请先升级浏览器或使用其它浏览器。");window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href);</script><![endif]-->
+</head>
+
+<body>
+    
+    <!-- 首页动画 -->
+    <div class="wrap-start" id="start_js">
+        <img class="left-img" id="left_js" src="<%=require('../images/l.png')%>" alt="">
+        <img class="right-img" id="right_js" src="<%=require('../images/s.png')%>" alt="">
+    </div>
+
+    <!-- nav -->
+    <div class="wrap">
+        ${require('html-loader!./common/nav.html')}
+    </div>
+
+    <!-- 左 -->
+    <div class="main-left">
+        <div class="cen">
+            <h4>面部-头发-身体</h4>
+            <p>提取自然纯粹之源</p>
+            <a href="#">立即查看</a>
+        </div>
+        <div class="tl">
+            <div class="t">
+                <h4>体内吸收</h4>
+                <p>保健饮品营养素</p>
+            </div>
+            <div class="t">
+                <h4>关于</h4>
+                <p>OLOMI故事</p>
+            </div>
+            <div class="t">
+                <h4>理念</h4>
+                <p>OLOMI产品设计</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右 -->
+    <div class="main-right">
+        <h1>OLOML</h1>
+    </div>
+
+    <!-- footer -->
+    ${require('html-loader!./common/footer.html')}
+ 
+</body>
+</html>

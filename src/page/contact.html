@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>联系我们</title>
+</head>
+<body>
+    <!-- nav -->
+    ${require('html-loader!./common/nav.html')}
+
+    <div class="top-page contact">
+        <nav>
+            <ul>
+                <li>理念</li>
+                <li><a href="story.html" id=""><i class="icon iconfont icon-jiantou4"></i>OLOMI故事</a></li>
+                <li><a href="life.html" id="">OLOMI生活</a></li>
+                <li><a href="contact.html" id="">联系我们</a></li>
+                <li><a href="join.html" id="">加入我们</a></li>
+            </ul>
+        </nav>
+        <h1 class="home-link"><a href="./index.html" title="首页">OLOMI</a></h1>
+    </div>
+
+    
+    <div class="main contact">
+        <div class="container-fluid">
+            <div class="row row1">
+                <div class="col-md-7 col-sm-7 col-xs-12">
+                    <img src="<%=require('../images/cont_1.jpg')%>" alt="">
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-12">
+                    <h3>OLOMI欢迎您!</h3>
+                    <p>邮编: 435200</p>
+                    <p>电话: 027-15432789</p>
+                    <p>地址：广东省深圳市南山区枫叶大夏19楼R</p>
+                    <br/><br/><br/>
+                    <h3>用户反馈</h3>
+                    <p>用户体验反馈/问题咨询反馈/使用建议反馈等</p>
+                    <p>电话：027-15432789</p>
+                    <p>邮箱：leanshi2018.163.com</p>
+                </div>
+            </div>
+            <div class="row row2">
+                <img src="<%=require('../images/cont_2.jpg')%>" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    ${require('html-loader!./common/footer.html')}
+   
+</body>
+</html>

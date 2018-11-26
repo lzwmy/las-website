@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OLOMI设计</title>
+</head>
+<body>
+    <!-- nav -->
+    ${require('html-loader!./common/nav.html')}
+
+    <div class="top-page design">
+        <nav>
+            <ul>
+                <li>理念</li>
+                <li><a href="brand.html" id=""><i class="icon iconfont icon-jiantou4"></i>OLOMI品牌</a></li>
+                <li><a href="design.html" id="">OLOMI设计</a></li>
+            </ul>
+        </nav>
+        <h1 class="home-link"><a href="./index.html" title="首页">OLOMI</a></h1>
+    </div>
+
+    
+    <div class="main design">
+        <div class="container-fluid">
+            <h3 class="text-center top_t">皈依极简主义,享受纯粹视感</h3>
+            <div class="row row1">
+                <div class="o1">
+                    <div class="o2"  data-scroll-reveal="enter bottom right and move 100px over 0.5s">
+                        <h3>品牌设计风格</h3>
+                        <p>高端大气,&nbsp;&nbsp;简洁,&nbsp;&nbsp;天然,&nbsp;&nbsp;高雅,&nbsp;&nbsp;年轻化,&nbsp;&nbsp;个性化</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row row2">
+                <h3>品牌个性</h3>
+                <p>纯、简、雅、启发、独特、创新</p>
+                <img src="<%=require('../images/design_bot.jpg')%>" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    ${require('html-loader!./common/footer.html')}
+   
+</body>
+</html>

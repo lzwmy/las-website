@@ -1,0 +1,217 @@
+#top {
+    height: 100px;
+    background: #f9f9f9;
+}
+#top .home-link{
+    width: 300px;
+    height: 100px;
+    margin:0;
+    position: absolute;
+    left:50%;
+    top:0;
+    transform: translate(-50%,0);
+    background: url('../images/pro_top.png') no-repeat center bottom;
+    background-size: 100%;
+}
+#top .home-link a{
+    color:#fff;
+    display: block;
+    font-size:26px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+#top .home-link a:hover{
+    text-shadow:0 1px 5px #989898;
+}
+
+#main{
+   background: #e4dbd4;
+   padding:0 200px;
+   bottom:70px;
+}
+#main .top-nav ul{
+    height: 110px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#main .top-nav li{
+    margin-right: 70px;
+}
+#main .top-nav li i{
+    display: inline-block;
+    margin-right:10px;
+    font-size:20px;
+    transform:rotate(90deg);
+}
+#main .swiper-wrap1{
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 800px;
+    padding: 20px 105px 0; 
+    background: url('../images/pros_bg.jpg') no-repeat center top;
+    background-size:100%; 
+    margin-bottom:20px;
+}
+
+#main .swiper-wrap1 .swiper-pagination-total{
+    color:#777;
+}
+#main .swiper-container .swiper-slide img{
+    width:100%;
+}
+#main .swiper-pagination {
+    bottom:120px;
+}
+#main .swiper-wrap1 .swiper-button-next{
+    right:30px;
+    top:45%;
+}
+#main .swiper-wrap1 .swiper-button-prev{
+    left:30px;
+    top:45%;
+}
+
+#main .right {
+    padding-left:50px;
+}
+#main .right h2{
+    border-top:1px solid #fff;
+    padding:20px 0 30px;
+    margin-top:5px;
+    font-size:20px;
+}
+#main .right p{
+    margin-bottom: 30px;
+    color:#5f5e5e;
+}
+#main .right .price{
+    font-size:16px;
+    font-weight:bold;
+}
+#main .right .price+p{
+    color:#0f8619;
+}
+#main .right .number p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#main .right .number p span{
+    margin-right: 80px;
+}
+#main .right img{
+    width:147px;
+}
+
+#main .proshows{
+    margin:50px 0;
+}
+#main .swiper-wrap2{
+    position: relative;
+    padding: 20px 50px; 
+}
+#main .swiper2 .pro{
+    position:relative;
+    margin-bottom: 50px;
+    box-shadow: 0 1px 5px #d2bfa3;
+}
+#main .proshows img{
+    width: 100%;
+    display: block;
+    margin:0 auto;
+    margin-bottom:15px;
+    box-shadow: 0 1px 5px #d2bfa3;
+}
+#main .swiper2 .pro .bottom{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+#main .swiper-button-prev,
+#main .swiper-button-next{
+    outline: none;
+}
+#main .swiper2 .pro .bottom p{
+    margin-bottom: 3px;
+}
+#main .swiper2 .pro .bottom p .line{
+    margin:0 20px;
+}
+
+
+@media screen and ( max-width: 768px ) {
+    #main{
+        padding:0;
+    }
+    #main .top-nav ul{
+        height: 45px;
+    }
+    #main .top-nav li{
+        margin-right: 15px;
+    }
+    #main .swiper1 {
+        height: 280px;
+    }
+    #main .swiper-wrap1 .swiper-button-next,
+    #main .swiper-wrap1 .swiper-button-prev{
+        width: 30px;
+        height: 20px;
+        margin-top: -10px;
+    }
+    #main .swiper-wrap1 .swiper-button-next{
+        right:15px;
+    }
+    #main .swiper-wrap1 .swiper-button-prev{
+        left:15px;
+    }
+    #main .swiper-wrap1{
+        padding: 47px;
+        height: auto;
+        background-size:100% 100%;
+    }
+    #main .swiper-pagination{
+        bottom:20px;
+    }
+    #main .right h2{
+        font-size:18px;
+    }
+    #main .right h2{
+        border:none;
+        padding:0;
+    }
+    #main .right .number p{
+        justify-content: space-between;
+        margin-bottom:5px;
+    }
+    #main .right p{
+        margin-bottom:10px;
+    }
+    #main .right .number p span{
+        margin-right:30px;
+    }
+    #main .pro{
+        margin-bottom: 15px;
+        width:100%;
+    }
+    #main .pro .bottom p{
+        margin-bottom: 0;
+    }
+}
+
+@media screen  and ( max-width: 1068px ) and (min-width: 765px) {
+    #main .swiper1{
+        height: auto;
+    }
+    #main .swiper-wrap1{
+        padding:95px;
+    }
+}
