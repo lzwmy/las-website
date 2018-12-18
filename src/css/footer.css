@@ -1,8 +1,8 @@
 footer{
     padding: 0 100px;
-    height: 70px;
+    height: 100px;
     background: #e4dbd4;
-    display:flex !important;
+    display:flex ;
     flex-wrap: wrap;
     justify-content:space-between;
 }
@@ -19,12 +19,13 @@ footer ul{
     display:flex;
     float: left\9;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
     margin: 0;
 }
 footer ul li{
-    margin-right: 20px;
-    line-height: 70px\9;
+    margin-right: 40px;
+    line-height: 100px\9;
     display: inline-block\9;
     float:left\9;
 }
@@ -37,7 +38,7 @@ footer ul li img{
     vertical-align: bottom;
 }
 footer .right{
-    padding:10px 0;
+    padding-top:35px;
     text-align: right;
     line-height: 25px;
     font-size: 12px;
@@ -48,12 +49,12 @@ footer .right p{
     color:#5f5f5f;
 }
 footer .copy-right span{
-    margin-left:20px;
+    margin-left:30px;
 }
 #top_back{
     position: fixed;
     bottom:80px;
-    right:80px;
+    right:60px;
     width:40px;
     height: 40px;
     background: #fff;
@@ -98,7 +99,7 @@ footer .copy-right span{
     }
     footer .right{
         padding:0;
-        text-align: center;
+        text-align: left;
     }
     #top_back{
         position: fixed;
@@ -106,5 +107,14 @@ footer .copy-right span{
         right:10px;
         width:36px;
         height:36px;
+    }
+    footer .copy-right span{
+        margin:0;
+        margin-right:10px;
+    }
+}
+@media screen  and ( max-width: 1068px ) and (min-width: 765px) {
+    footer ul{
+        justify-content: flex-start;
     }
 }

@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>产品页</title>
+    <title>产品</title>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
 </head>
 <body>
     <!-- nav -->
     ${require('html-loader!./common/nav.html')}
 
     <div id="top">
-        <h1 class="home-link"><a href="./index.html" title="首页">OLOMI</a></h1>
+        <h1 class="home-link"><a href="./index.html" title="首页"></a></h1>
     </div>
 
     
@@ -19,11 +21,11 @@
         <div class="container-fluid">
             <nav class="top-nav">
                 <ul>
-                    <li><a href="product.html"><i class="icon iconfont icon-jiantou4"></i>全部</a></li>
-                    <li><a href="javascript:;" data-type="a1">护肤</a></li>
-                    <li><a href="javascript:;" data-type="a2">护理</a></li>
-                    <li><a href="javascript:;" data-type="a3">保健</a></li>
-                    <li><a href="javascript:;" data-type="a4">童品</a></li>
+                    <li><i class="icon iconfont icon-jiantou4"></i><a href="product.html" title="全部">全部</a></li>
+                    <li><a href="javascript:;" data-type="1" title="营养食品">营养食品</a></li>
+                    <li><a href="javascript:;" data-type="2" title="美妆护肤">美妆护肤</a></li>
+                    <li><a href="javascript:;" data-type="3" title="身体护理">身体护理</a></li>
+                    <li><a href="javascript:;" data-type="4" title="家居清洁">家居清洁</a></li>
                 </ul>
             </nav>
             <div class="row" id="content"></div>

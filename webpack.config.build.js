@@ -56,6 +56,30 @@ module.exports = {
             hash: true,
         }),
         new HtmlWebpackPlugin({
+            template: './src/page/common/about_nav.html',
+            filename: './src/page/common/about_nav.html',
+            minify: {
+                collapseWhitespace: true,  
+                removeComments:true,       
+                minifyCSS:true, 
+                minifyJS:true, 
+                minifyURLs:true 
+            },
+            hash: true,
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/common/quality_nav.html',
+            filename: './src/page/common/quality_nav.html',
+            minify: {
+                collapseWhitespace: true,  
+                removeComments:true,       
+                minifyCSS:true, 
+                minifyJS:true, 
+                minifyURLs:true 
+            },
+            hash: true,
+        }),
+        new HtmlWebpackPlugin({
             template: './src/page/common/footer.html',
             filename: './src/page/common/footer.html',
             minify: {
@@ -66,12 +90,6 @@ module.exports = {
                 minifyURLs:true 
             },
             hash: true,
-        }),
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            jquery: "jquery",
-            "window.jQuery": "jquery"
         }),
         new HtmlWebpackPlugin({
             template: './src/page/product.html',
@@ -87,48 +105,9 @@ module.exports = {
             hash: true,
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/inVivo.html',
-            filename: './src/page/inVivo.html',
-            chunks: ['common','product'],
-            minify: {
-                collapseWhitespace: true,  
-                removeComments:true,       
-                minifyCSS:true, 
-                minifyJS:true, 
-                minifyURLs:true 
-            },
-            hash: true,
-        }),
-        new HtmlWebpackPlugin({
             template: './src/page/proShow.html',
             filename: './src/page/proShow.html',
             chunks: ['common','proshow'],
-            minify: {
-                collapseWhitespace: true,  
-                removeComments:true,       
-                minifyCSS:true, 
-                minifyJS:true, 
-                minifyURLs:true 
-            },
-            hash: true
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/page/brand.html',
-            filename: './src/page/brand.html',
-            chunks: ['common'],
-            minify: {
-                collapseWhitespace: true,  
-                removeComments:true,       
-                minifyCSS:true, 
-                minifyJS:true, 
-                minifyURLs:true 
-            },
-            hash: true
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/page/design.html',
-            filename: './src/page/design.html',
-            chunks: ['common'],
             minify: {
                 collapseWhitespace: true,  
                 removeComments:true,       
@@ -165,6 +144,84 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
+            template: './src/page/worth.html',
+            filename: './src/page/worth.html',
+            chunks: ['common'],
+            minify: {
+                collapseWhitespace: true,  
+                removeComments:true,       
+                minifyCSS:true, 
+                minifyJS:true, 
+                minifyURLs:true 
+            },
+            hash: true
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/find.html',
+            filename: './src/page/find.html',
+            chunks: ['common'],
+            minify: {
+                collapseWhitespace: true,  
+                removeComments:true,       
+                minifyCSS:true, 
+                minifyJS:true, 
+                minifyURLs:true 
+            },
+            hash: true
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/technology.html',
+            filename: './src/page/technology.html',
+            chunks: ['common'],
+            minify: {
+                collapseWhitespace: true,  
+                removeComments:true,       
+                minifyCSS:true, 
+                minifyJS:true, 
+                minifyURLs:true 
+            },
+            hash: true
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/formula.html',
+            filename: './src/page/formula.html',
+            chunks: ['common'],
+            minify: {
+                collapseWhitespace: true,  
+                removeComments:true,       
+                minifyCSS:true, 
+                minifyJS:true, 
+                minifyURLs:true 
+            },
+            hash: true
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/quality.html',
+            filename: './src/page/quality.html',
+            chunks: ['common'],
+            minify: {
+                collapseWhitespace: true,  
+                removeComments:true,       
+                minifyCSS:true, 
+                minifyJS:true, 
+                minifyURLs:true 
+            },
+            hash: true
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/develop.html',
+            filename: './src/page/develop.html',
+            chunks: ['common'],
+            minify: {
+                collapseWhitespace: true,  
+                removeComments:true,       
+                minifyCSS:true, 
+                minifyJS:true, 
+                minifyURLs:true 
+            },
+            hash: true
+        }),
+        new HtmlWebpackPlugin({
             template: './src/page/contact.html',
             filename: './src/page/contact.html',
             chunks: ['common'],
@@ -189,6 +246,12 @@ module.exports = {
                 minifyURLs:true 
             },
             hash: true
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            jquery: "jquery",
+            "window.jQuery": "jquery"
         })
     ],
     //模块配置

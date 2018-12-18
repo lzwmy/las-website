@@ -17,8 +17,8 @@ if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
 
 // 返回顶部
 !(function(){
-    var top_back = $("#top_back");
-    var h = $(window).scrollTop();
+    let top_back = $("#top_back");
+    let h = $(window).scrollTop();
     top_back.fadeOut(0);
     $(window).scroll(function(){
         h = $(window).scrollTop();
@@ -34,99 +34,114 @@ if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
 })();
 
 //nav
-!(function(){
+function nav(){
     let h = $(window).height();
     let w = $(window).width();
+    let oNav1 = $("#nav_js");
     let oNav1_a = $("#nav_js > .nav1 > a");
     let oNav2 = $("#nav_js .nav2");
-    let oNav2_a = $("#nav_js .nav2 > li a");
-    let oNav3 = $("#nav_js .nav3");
+    let oNav2_img = oNav2.find(".img-box img");
     let oMask = $("#mask_js");
     let oClose = $(".nav-close");
 
-    let oDownBtn = $("#down_btn_js")
-    let oSearchBtn = $("#search_btn_js")
-    let oDownBox = $("#right_js .right-box")
+    let oDownBtn = $("#down_btn_js");
+    let oSearchBtn = $("#search_btn_js");
+    let oRightNav = $("#right_js");
+    let oRightUl = $("#right_js .nav-right");
+    let oDownBox = $("#right_js .right-box");
+
     let oSearchIcon = $("#search_input + .icon");
     let oSearchInput = $("#search_input");
     let oSearchContent = $("#search_content");
+
+    let top_a = $("#top .home-link"); 
+    let top_a_idea = $(".top-page .home-link"); 
     let timer = null;
 
-    oNav2.css({"height":h+"px"})
-    oDownBox.css({"height":h+"px"})
-    oMask.css({"height":h+"px"})
-    $(window).resize(function(){
-        h = $(window).height();
-        w = $(window).width();
-        oNav2.css({"height":h+"px"});
-        oDownBox.css({"height":h+"px"});
-        oMask.css({"height":h+"px"});
-        oNav3.css({"width":w-oNav2.width()+"px"});
-    });
+    let menu_btn = $("#menu_btn");
 
+    if (!/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
+        oNav2.css({"height":h+"px"})
+        oDownBox.css({"height":h+"px"})
+        $(window).resize(function(){
+            h = $(window).height();
+            w = $(window).width();
+            oNav2.css({"height":h+"px"})
+            oDownBox.css({"height":h+"px"})
+        })
+    }
 
     oNav1_a.click(function(){
+        top_a.css({"z-index":"0"});
+        top_a_idea.css({"z-index":"0"});
+        oNav1.addClass("active");
+        $(oSearchBtn).css({"position":"fixed"});
+        $(oDownBtn).css({"position":"fixed"});
         oNav2.removeClass("active");
-        oNav3.removeClass("active");
         oDownBox.removeClass("active");
         $(this).parent().find(".nav2").addClass("active");
-        $(oNav1_a).css({"position":"fixed"});
         oClose.addClass("active");
         oMask.addClass("active")
     });
 
-    oNav2_a.click(function(){
-        oNav3.removeClass("active");
-        oNav3.css({"width":w-oNav2.width()+"px"});
-        $(this).parent().find(".nav3").addClass("active");
-    });
-
     oClose.click(function(){
+        top_a.css({"z-index":"21"});
+        top_a_idea.css({"z-index":"21"});
+        oNav1.removeClass("active");
+        $(oSearchBtn).css({"position":"absolute"});
+        $(oDownBtn).css({"position":"absolute"});
         oNav2.removeClass("active");
-        oNav3.removeClass("active");
         oMask.removeClass("active")
         oDownBox.removeClass("active");
         oClose.removeClass("active");
         oSearchIcon.removeClass("active");
-        $(oNav1_a).css({"position":"absolute"});
-        $(oDownBtn).css({"position":"absolute"});
-        $(oSearchBtn).css({"position":"absolute"});
     });
 
     oMask.click(function(){
-        $(oNav1_a).css({"position":"absolute"});
-        $(oDownBtn).css({"position":"absolute"});
+        top_a.css({"z-index":"21"});
+        top_a_idea.css({"z-index":"21"});
+        oNav1.removeClass("active");
         $(oSearchBtn).css({"position":"absolute"});
+        $(oDownBtn).css({"position":"absolute"});
         oNav2.removeClass("active");
-        oNav3.removeClass("active");
         oDownBox.removeClass("active");
         $(this).removeClass("active")
         oClose.removeClass("active");
     });
 
     oDownBtn.click(function(){
+        top_a.css({"z-index":"0"});
+        top_a_idea.css({"z-index":"0"});
         $(oSearchBtn).css({"position":"fixed"});
         $(oDownBtn).css({"position":"fixed"});
         oNav2.removeClass("active");
-        oNav3.removeClass("active");
         oDownBox.removeClass("active");
         $(this).parent().find(".right-box").addClass("active");
         oMask.addClass("active");
         oClose.addClass("active");
     });
     oSearchBtn.click(function(){
+        top_a.css({"z-index":"0"});
+        top_a_idea.css({"z-index":"0"});
         $(oSearchBtn).css({"position":"fixed"});
         $(oDownBtn).css({"position":"fixed"});
         $(oSearchBtn).html();
         oNav2.removeClass("active");
-        oNav3.removeClass("active");
         oDownBox.removeClass("active");
         $(this).parent().find(".right-box").addClass("active");
         oMask.addClass("active");
         oClose.addClass("active");
-        oSearchInput.focus();
+        if (!/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
+            oSearchInput.focus();
+        }
         oSearchIcon.addClass("active");
     });
+    oNav2.on("mouseenter","a",function(){
+        let bgPath = $(this).attr("data-img");
+        $(oNav2_img).attr("src",bgPath);
+    });
+
+
     //搜索框异步查找
     oSearchInput.on("input",function(e){
         oSearchContent.empty();
@@ -170,6 +185,61 @@ if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
         }
     });
 
-})();
+    //手机端导航按钮
+    menu_btn.on("click",function(){
+        if($(oNav1).hasClass("active")){
+            oNav1.removeClass("active");
+            oClose.removeClass("active");
+            oMask.removeClass("active")
+            top_a.css({"z-index":"21"});
+            top_a_idea.css({"z-index":"21"});
+        }else{
+            oNav1.addClass("active");
+            oClose.addClass("active");
+            oMask.addClass("active")
+            top_a.css({"z-index":"0"});
+            top_a_idea.css({"z-index":"0"});
+        }
+        
+        
+    })
+    //激活当前nav
+    $(".top-page li a").each(function(){ 
+        let $this = $(this); 
+	    if($this[0].href==String(window.location)){ 
+	        $this.parent().addClass("active").siblings().removeClass("active"); 
+        }
+    }); 
+    $(".top-nav li").each(function(){ 
+        let $this = $(this); 
+        let proli = $this.children("a").attr("data-type");
+        let url = window.location.search;
+	    if($this[0].href==String(window.location)){ 
+            $this.parent().addClass("active").siblings().removeClass("active"); 
+        }
+        if(!proli){
+            proli = 0;
+        }
+        if(url.charAt(url.length-1)==proli){
+            $this.addClass("active").siblings().removeClass("active");
+        }
+    }); 
+
+    let oNav1_li = $("#nav_js .nav1");
+    let urlPath = window.location.pathname;
+    let eq = 99;
+    if(urlPath.match(/.*story.*/i) || urlPath.match(/.*life.*/i) || urlPath.match(/.*worth.*/i) || urlPath.match(/.*develop.*/i)){
+        eq = 0;
+    }else if(urlPath.match(/.*find.*/i) || urlPath.match(/.*technology.*/i) || urlPath.match(/.*formula.*/i) || urlPath.match(/.*quality.*/i)){
+        eq = 1;
+    }else if(urlPath.match(/.*product.*/i)){
+        eq = 2;
+    }else if(urlPath.match(/.*join.*/i) || urlPath.match(/.*contact.*/i)){
+        eq = 3;
+    }
+    oNav1_li.eq(eq).addClass('active').siblings().removeClass("active");
+};
+
+nav();
 
 

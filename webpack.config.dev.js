@@ -36,28 +36,10 @@ module.exports = {
             chunks: ['common','product']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/inVivo.html',
-            filename: './src/page/inVivo.html',
-            hash: true,
-            chunks: ['common','product']
-        }),
-        new HtmlWebpackPlugin({
             template: './src/page/proShow.html',
             filename: './src/page/proShow.html',
             hash: true,
             chunks: ['common','proshow']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/page/brand.html',
-            filename: './src/page/brand.html',
-            hash: true,
-            chunks: ['common']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/page/design.html',
-            filename: './src/page/design.html',
-            hash: true,
-            chunks: ['common']
         }),
         new HtmlWebpackPlugin({
             template: './src/page/story.html',
@@ -82,6 +64,42 @@ module.exports = {
             filename: './src/page/join.html',
             hash: true,
             chunks: ['common',"join"]
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/worth.html',
+            filename: './src/page/worth.html',
+            hash: true,
+            chunks: ['common']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/develop.html',
+            filename: './src/page/develop.html',
+            hash: true,
+            chunks: ['common']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/find.html',
+            filename: './src/page/find.html',
+            hash: true,
+            chunks: ['common']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/technology.html',
+            filename: './src/page/technology.html',
+            hash: true,
+            chunks: ['common']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/formula.html',
+            filename: './src/page/formula.html',
+            hash: true,
+            chunks: ['common']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/quality.html',
+            filename: './src/page/quality.html',
+            hash: true,
+            chunks: ['common']
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -125,4 +143,16 @@ module.exports = {
         ]
     },
     mode:'development', // 可以更改模式
+
+    devServer: { 
+        host: '192.168.1.144', 
+        port: 9090,
+//         proxy: { 
+//             '/v2/*': { 
+//                 changeOrigin: true, 
+//                 target: 'https://api.douban.com/', 
+//             }
+//         }
+    }
+        
 }
