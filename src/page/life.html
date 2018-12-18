@@ -2,65 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>OLOMI生活</title>
+    <title>愿景使命</title>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
 </head>
 <body>
     <!-- nav -->
     ${require('html-loader!./common/nav.html')}
 
     <div class="top-page life">
-        <nav>
-            <ul>
-                <li>理念</li>
-                <li><a href="story.html" id=""><i class="icon iconfont icon-jiantou4"></i>OLOMI故事</a></li>
-                <li><a href="life.html" id="">OLOMI生活</a></li>
-                <li><a href="contact.html" id="">联系我们</a></li>
-                <li><a href="join.html" id="">加入我们</a></li>
-            </ul>
-        </nav>
-        <h1 class="home-link"><a href="./index.html" title="首页">OLOMI</a></h1>
+        ${require('html-loader!./common/about_nav.html')}
+        <h1 class="home-link"><a href="./index.html" title="首页"></a></h1>
     </div>
 
     
     <div class="main life">
         <div class="container-fluid">
             <div class="row row1">
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <h3>Hello,感谢您对我的认知</h3>
-                    <h3>我-OLOMI诞生于1998年<br/>9月20日,美国加州是我的<br/>诞生基地。</h3>
-                    <h3>我在以非一般的速度成长<br/>每天跨越国际</h3>
-                    <h3>如果您对我很感兴趣,还清<br/>您留下对我爱的印记!</h3>
-                    <p>我们的所有产品都是自己品牌</p>
-                    <p>商城的目的是把所有产品都展示出来供顾客挑<br/>选，我们的目的经过我们的挑选，把最好的产<br/>品直接展现给顾客</p>
-                    <p>我们的所有产品都是自己品牌</p>
-                    <p>我们的所有产品都是自己品牌</p>
-                    <p>我们的所有产品都是自己品牌</p>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <h3>始于我们的生活方式</h3>
                 </div>
-                <div class="col-md-9 col-sm-9 col-xs-12">
-                    <img src="<%=require('../images/life-1.jpg')%>" alt="" width="100%">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <img src="<%=require('../images/life-1.jpg')%>" alt="" width="100%" class="shadow-none" data-scroll-reveal="enter left and move 50px over 0.5s">
                 </div>
             </div>
             <div class="row row2">
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <img src="<%=require('../images/life-2.jpg')%>" alt="">
-                    <p>始于我们的生活方式始于我们的生活方式</p>
-                    <p>始于我们的生活方式始于我们的生活方式</p>
-                    <p>始于我们的生活方式</p>
-                    <p>始于我们的生活方式始于我们的生活方式</p>
-                    <p>始于我们的生活方式</p>
-                    <p>始于我们的生活方式始于我们的生活方式</p>
-                    <p>始于我们的生活方式始于我们的生活方式</p>
+                <div class="col-md-7 col-sm-7 col-xs-12">
+                    <p>始于我们日常生活的选择</p>
+                    <img src="<%=require('../images/life-2.jpg')%>" alt="" data-scroll-reveal="enter bottom and move 50px over 0.5s">
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <img src="<%=require('../images/life-3.jpg')%>" alt="">
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                    <img src="<%=require('../images/life-4.jpg')%>" alt="">
+                <div class="col-md-4 col-md-offset-1 col-sm-4 col-xs-6">
+                    <p>始于我们想要的生活</p>
+                    <img src="<%=require('../images/life-3.jpg')%>" alt="" data-scroll-reveal="enter bottom and move 50px over 0.5s">
                 </div>
             </div>
-            <p class="text-center bot-text">看到生活的选择，跟随你的内心，选择不一样的生活</p>
+            <div class="row row3">
+                <div class="col-md-7 col-sm-7 col-xs-12">
+                    <p>始于我们想要展示的自己</p>
+                    <p>始于我们吃的食物</p>
+                    <p>始于智慧</p>
+                    <p>始于必要性</p>
+                    <p>始于纯净和高品质</p>
+                    <img src="<%=require('../images/life-4.jpg')%>" alt="" data-scroll-reveal="enter bottom and move 50px over 0.5s">
+                </div>
+                <div class="col-md-4 col-md-offset-1 col-sm-4 col-xs-6">
+                    <p>始于我们怎样照顾好自己</p>
+                    <p>始于我们关心自己身体和精神和方式</p>
+                    <img src="<%=require('../images/life-5.jpg')%>" alt="" data-scroll-reveal="enter bottom and move 50px over 0.5s">
+                    <p>始于健康</p>
+                    <p>始于简单</p>
+                    <p>始于好玩和创造力</p>
+                </div>
+            </div>
+            <div class="row row4">
+                <div class="col-md-7 col-sm-7 col-xs-12">
+                    <p>我们年轻富有创造力</p>
+                    <p>我们真诚，我们乐意倾听</p>
+                </div>
+            </div>
+            <img src="<%=require('../images/life-6.jpg')%>" alt="" data-scroll-reveal="enter bottom and move 50px over 0.5s">
+            <h3 class="text-center bot-text">我们想要影响,所以它开始</h3>
         </div>
     </div>
 

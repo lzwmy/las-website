@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>产品详情</title>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
 </head>
 <body>
     
@@ -12,7 +14,7 @@
     ${require('html-loader!./common/nav.html')}
 
     <div id="top">
-        <h1 class="home-link"><a href="./index.html" title="首页">OLOMI</a></h1>
+        <h1 class="home-link"><a href="./index.html" title="首页"></a></h1>
     </div>
 
     
@@ -20,7 +22,7 @@
         <div class="container-fluid">
             <nav class="top-nav">
                 <ul>
-                    <li><a href="product.html">全部</a></li>
+                    <li><a href="product.html" title="全部">全部</a></li>
                     <li><i class="icon iconfont icon-jiantou4"></i><span id="nav_title"></span></li>
                 </ul>
             </nav>
@@ -55,7 +57,7 @@
                             <span>x1</span>
                         </p>
                     </div>
-                    <p>适用于任何扶质</p>
+                    <p>适用于任何肤质</p>
                     <p>保湿补水/控油/祛痘</p>
                     <p>2018年8月25日上市/3年保质期/产于美国加州</p>
                     <p class="price">&yen; 280</p>
@@ -64,12 +66,7 @@
                 </div>
             </div>
 
-            <div class="proshows">
-                <img src="<%=require('../images/proshow.png')%>" alt="">
-                <img src="<%=require('../images/proshow.png')%>" alt="">
-                <img src="<%=require('../images/proshow.png')%>" alt="">
-            </div>
-
+            <div class="row row2" id="proShow"></div>
             <div class="row hidden-xs">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="swiper-wrap2">

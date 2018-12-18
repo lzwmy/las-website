@@ -12,18 +12,17 @@
     transform: translate(-50%,0);
     background: url('../images/pro_top.png') no-repeat center bottom;
     background-size: 100%;
+    z-index: 21;
 }
 #top .home-link a{
-    color:#fff;
     display: block;
-    font-size:26px;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 3px;
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 100%;
+    background: url('../images/logo.png') no-repeat center bottom;
+    background-size: 40%;
 }
 #top .home-link a:hover{
     text-shadow:0 1px 5px #989898;
@@ -31,7 +30,7 @@
 
 #main{
    background: #e4dbd4;
-   padding:0 200px;
+   padding:0 100px;
    bottom:70px;
 }
 #main .top-nav ul{
@@ -44,18 +43,22 @@
 #main .top-nav li{
     margin-right: 70px;
 }
+#main .top-nav li span{
+    color:#4e6142;
+}
 #main .top-nav li i{
     display: inline-block;
     margin-right:10px;
     font-size:20px;
     transform:rotate(90deg);
+    vertical-align: middle;
 }
 #main .swiper-wrap1{
     cursor: pointer;
     position: relative;
     width: 100%;
-    height: 800px;
-    padding: 20px 105px 0; 
+    height: 880px;
+    padding: 20px 118px 0; 
     background: url('../images/pros_bg.jpg') no-repeat center top;
     background-size:100%; 
     margin-bottom:20px;
@@ -78,15 +81,24 @@
     left:30px;
     top:45%;
 }
+#main .swiper-button-prev{
+    background-image: url('../images/jiantou.png');
+}
+#main .swiper-button-next{
+    background-image: url('../images/jiantou.png');
+    transform-origin: center center;
+    transform: rotate(180deg);
+}
 
 #main .right {
-    padding-left:50px;
+    padding-left:120px;
 }
 #main .right h2{
     border-top:1px solid #fff;
     padding:20px 0 30px;
     margin-top:5px;
     font-size:20px;
+    color:#555;
 }
 #main .right p{
     margin-bottom: 30px;
@@ -97,7 +109,7 @@
     font-weight:bold;
 }
 #main .right .price+p{
-    color:#0f8619;
+    color:#4e6142;
 }
 #main .right .number p{
     display: flex;
@@ -108,7 +120,7 @@
     margin-right: 80px;
 }
 #main .right img{
-    width:147px;
+    width:200px;
 }
 
 #main .proshows{
@@ -116,12 +128,15 @@
 }
 #main .swiper-wrap2{
     position: relative;
-    padding: 20px 50px; 
+    padding: 20px 80px; 
 }
 #main .swiper2 .pro{
     position:relative;
     margin-bottom: 50px;
     box-shadow: 0 1px 5px #d2bfa3;
+}
+#main .swiper2 .pro img{
+    border-radius: 6px;
 }
 #main .proshows img{
     width: 100%;
@@ -135,6 +150,10 @@
     bottom:0;
     left:0;
     width:100%;
+    height: 70px;
+    background: url('../images/pro_bot.png') no-repeat center top;
+    background-size: 100% 100%;
+    padding-top:25px;
 }
 #main .swiper-button-prev,
 #main .swiper-button-next{
@@ -147,6 +166,29 @@
     margin:0 20px;
 }
 
+#main .row2{
+    margin:30px 0;
+}
+#main .row2 > div{
+    height: 970px;
+    padding:0;
+}
+#main .row2 h3,
+#main .row2 p{
+    color:#666;
+}
+#main .row2 img{
+    width:100%;
+    height: 100%;
+}
+#main .row2 > div.t{
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
+
 
 @media screen and ( max-width: 768px ) {
     #main{
@@ -156,7 +198,7 @@
         height: 45px;
     }
     #main .top-nav li{
-        margin-right: 15px;
+        margin-right: 10px;
     }
     #main .swiper1 {
         height: 280px;
@@ -181,8 +223,14 @@
     #main .swiper-pagination{
         bottom:20px;
     }
-    #main .right h2{
-        font-size:18px;
+    #main .right{
+        padding-left:15px;
+    }
+    #main h2{
+        font-size:18px !important;
+    }
+    #main h3{
+        font-size:16px !important;
     }
     #main .right h2{
         border:none;
@@ -205,13 +253,45 @@
     #main .pro .bottom p{
         margin-bottom: 0;
     }
+    #main .row2 > div{
+        height: 230px;
+    }
 }
-
+@media screen  and ( max-width: 1760px ) and (min-width: 1500px) {
+    #main .swiper-wrap1{
+        height: 780px;
+    }
+}
+@media screen  and ( max-width: 1500px ) and (min-width: 1200px) {
+    #main .swiper-wrap1{
+        height: 680px;
+    }
+}
 @media screen  and ( max-width: 1068px ) and (min-width: 765px) {
     #main .swiper1{
         height: auto;
     }
     #main .swiper-wrap1{
         padding:95px;
+    }
+    .nav-com{
+        height: 80px;
+    }
+    #top{
+        height: 80px;
+    }
+    #top .home-link {
+        width: 200px;
+        height: 80px;
+        background-size: 100%;
+    }
+    .nav-com .left ol {
+        padding: 30px 0 0 15px;
+    }
+    #main .row2 > div{
+        height: 400px;
+    }
+    #main .swiper2 .pro .bottom{
+        border:none;
     }
 }

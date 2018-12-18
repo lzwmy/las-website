@@ -31,27 +31,30 @@
     position: absolute;
     top:0;
     left:0;
-    width: 500px;
+    width: 100%;
     height: 100%;
-    padding:0;
+    padding:48px 0 0 120px;
     z-index: 20;
 }
+.nav-com .left ol.active{
+    position: fixed;
+}
+.nav-com .left ol .nav1{
+    display: inline-block;
+    margin-right:60px;
+}
 .nav-com .left ol .nav1 > a{
-    position: absolute;
-    height: 100px;
-    line-height: 100px;
-    z-index: 21;
+    position: relative;
 }
-.nav-com .left ol .nav1:first-child > a{
-    left: 100px;
+.nav-com .left ol .nav1.active > a{
+    color:#4e6142;
+    border-bottom:1px solid #4e6142;
 }
-.nav-com .left ol .nav1:nth-child(2) > a{
-    left: 230px;
-}
+
 .nav-com .left .nav-close{
     position: absolute;
-    top:28px;
-    right:10px;
+    top:40px;
+    right:100px;
     font-size:24px;
     color:#6b6a6a;
     cursor: pointer;
@@ -66,90 +69,77 @@
 }
 
 .nav-com .left .nav2{
+    display: none;
     position: fixed;
     top:0;
     left:0;
-    left:-100%\9;
     bottom:0;
     width:50%;
     background: #e4dbd4;
-    padding:150px 0 0 100px;
+    padding:150px 0 0 120px;
     font-size:16px;
-    transition: all 0.3s;
-    transform:translate3d(-150%,0,0);
     box-sizing: border-box;
+    z-index: -1;
 }
-.nav-com .left .nav2.active{
-    transform: translate3d(0,0,0);
-    left:0\9;
+.nav-com .left .nav2 li > a{
+    display: block;
+    margin-bottom: 75px;
+    font-size:20px;
+    transition: all .5s;
 }
-.nav-com .left .nav2 > li{
-    margin-bottom: 50px;
+.nav-com .left .nav2 li > a:hover{
+    color:#4e6142;
+    text-indent: 10px;
 }
 
-/* .nav-com .left .nav3{
-    position: absolute;
-    top:0;
-    left:500px;
-    height: 100%;
-    background: #edd2bd;
-    padding:150px 0 0 100px;
-    font-size:16px;
-    transform: translateY(-120%);
-    box-sizing: border-box;
+.nav-com .left .nav2.active li > a{
+    animation: slideInLeft .5s;
 }
-.nav-com .left .nav3.active{
-    animation-name: bounceInDown;
-    animation-fill-mode: forwards;
-    animation-duration:.4s;
-    transform: translateY(0);
-}
-.nav-com .left .nav3 a{
+.nav-com .left .nav2.active{
     display: block;
-    margin-bottom: 20px;
-}*/
-.nav-com .left .img-box::after{
-    content:"OLOML";
-    display: block;
-    color:#fff;
-    font-size:26px;
-    text-align: center;
-    line-height: 150px;
-    width:150px;
-    height: 150px;
-    background: #edd2bd;
-    border-radius: 50%;
-    position: absolute;
-    left:0;
-    top:50%;
-    transform: translate(-50%,-50%);
-    box-shadow:  0 0 5px #888 inset;
 }
-.nav-com .left .img-box::before{
-    content:"";
-    display: block;
-    width:150px;
-    height: 150px;
-    background: url('../images/ra.png') right;
-    background-size: cover;
-    position: absolute;
-    left:0;
-    top:50%;
-    z-index: 1;
-    transform: translate(-100%,-50%);
-}
+
+
 .nav-com .left .img-box{
     position: absolute;
-    right:0;
+    left:100%;
     top:0;
     height: 100%;
-    width:638px;
-    box-shadow:  0 0 5px #888;
+    width:100%;
+    border:8px solid #fff;
 }
 .nav-com .left .img-box img{
     width:100%;
     height: 100%;
-} 
+}
+.nav-com .left .img-box a{
+    display: block;
+    width:160px;
+    height: 160px;
+    background: #e4dcd4 url('../images/logo.png') no-repeat center center;
+    background-size: 65%;
+    border-radius: 50%;
+    border:8px solid #fff;
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translate(-50%,-50%);
+    box-shadow:  0 0 5px #ccc inset;
+}
+.nav-com .left .img-box::before{
+    content:"";
+    display: block;
+    width:160px;
+    height: 160px;
+    background: url('../images/ra.png') right;
+    background-size: cover;
+    position: absolute;
+    left:-8px;
+    top:50%;
+    z-index: 1;
+    transform: translate(-100%,-50%);
+}
+ 
 
 .nav-com .right {
     position: absolute;
@@ -157,6 +147,9 @@
     top:0;
     width: 50%;
     height: 100%;
+}
+.nav-com .right.active{
+    position: fixed;
 }
 .nav-com .right .nav-right > li > a{
     display: block;
@@ -167,35 +160,62 @@
 }
 .nav-com .right .nav-right > li:first-child > a{
     right: 140px;
+    color:#4e6142;
 }
 .nav-com .right .nav-right > li:first-child > a::after{
     content: "|";
     margin-left: 20px;
-    color:#ccc;
+    color:#e2e2e2;
 }
 .nav-com .right .nav-right > li:nth-child(2) > a{
     right: 100px;
 }
 .nav-com .right .right-box{
+    display: none;
     position: fixed;
     top:0;
     right:0;
-    width:0;
+    width:50%;
     height: 100%;
     background: #e4dbd4;
     padding-top:150px;
+    border:8px solid #fff;
     font-size:16px;
     transition: width 0.3s;
     z-index: 20;
-    overflow-x: hidden;
 }
 .nav-com .right .right-box.active{
-    width: 500px;
+    display: block;
 }
+.nav-com .right .right-box.active .t{
+    display: block;
+    width:160px;
+    height: 160px;
+    border-radius: 50%;
+    background: #e4dbd4 url('../images/logo.png') no-repeat center center;
+    background-size:65%;
+    position: absolute;
+    top:50%;
+    left:-4px;
+    transform: translate(-50%,-50%);
+}
+.nav-com .right .right-box.active::before{
+    content:"";
+    width:168px;
+    height: 174px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translate(-50%,-50%);
+    clip:rect(auto,auto,auto,81px);
+}
+
 .nav-com .right .nav-close{
     position: absolute;
-    top:28px;
-    left:10px;
+    top:40px;
+    left:136px;
     font-size:24px;
     color:#6b6a6a;
     cursor: pointer;
@@ -206,16 +226,17 @@
     color:#555;
 }
 .nav-com .right .search .right-box form{
-    padding-left:40px;
+    padding:0 120px 0 136px;
 }
-.nav-com .right .search .right-box a{
-    display: block;
+.nav-com .right .search .right-box #search_content a{
+    display: inline-block;
+    margin-right:60px;
     margin-top: 10px; 
     color:#555;
 }
 .nav-com .right .search .right-box .form-group{
     margin-bottom: 25px;
-    width: 70%;
+    width: 100%;
     position: relative;
     height: 36px;
 }
@@ -239,17 +260,18 @@
     position: absolute;
     top:-2px;
     right:0;
+    color:#888;
     font-size:32px;
     cursor: pointer;
     transition: transform 1s ease;
-    transform: translate3d(-300px,0,0);
+    transform: translate3d(-600px,0,0);
 }
 .nav-com .right .search .right-box form i.active{
     transform: translate3d(0,0,0);
 }
 
 
-@media screen and ( max-width: 768px ) {
+@media screen and ( max-width: 760px ) {
     .nav-com .left,
     .nav-com .right,
     .nav-com .left ol,
@@ -259,33 +281,125 @@
     .nav-com{
         height: 0;
     }
-    .nav-com .left ol .nav1 > a,
+    .nav-com .right .nav-close {
+        top: 15px;
+        left: 15px;
+    }
+    .nav-com .left .menu{
+        position: absolute;
+        width:50px;
+        height: 50px;
+        left:15px;
+        right:15px;
+        z-index: 20;
+        padding-top:15px;
+    }
+    .nav-com .left .menu span{
+        background: #999;
+        display: block;
+        width:30px;
+        height: 2px;
+        margin-bottom:5px;
+        border-radius: 3px;
+    }
+    .nav-com .left .menu span:first-child{
+        width:25px;
+    }
+    .nav-com .left .menu span:last-child{
+        width:17px;
+    }   
+
+    .nav-com .left .nav-close {
+        top: 15px;
+        left: 15px;
+    }
+
+    .nav-com .left ol.active{
+        display: block !important;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 50% !important;
+        background: #e4dbd4;
+        padding: 70px 15px 0;
+        border: none;
+        font-size: 16px;
+        transition: width 0.3s;
+        z-index: 20;
+        animation: down 0.3s;
+    }
+    .nav-com .left ol.active a.home-a{
+        display: block;
+        width: 110px;
+        height: 110px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,55%);
+        border-radius: 50%;
+        background: #e4dbd4 url('../images/logo.png') no-repeat center center;
+        background-size:65%;
+    }
+    .nav-com .left ol.active li{
+        display: block;
+        margin-bottom:5%;
+    }
+
+    .nav-com .left .nav2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: #e4dbd4;
+        padding: 70px 15px 0;
+        font-size: 16px;
+        z-index: 30;
+    }
+    .nav-com .left .nav2 li > a{
+        margin-bottom: 5%;
+        font-size:16px;
+    }
+    .nav-com .left .img-box{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-top:5px solid #fff;
+    }
+    .nav-com .left .img-box a {
+        width: 110px;
+        height: 110px;
+        border: 5px solid #fff;
+        left: 50%;
+        top: 0;
+    }
+    .nav-com .left .img-box::before {
+        display: none;
+    }
+
+    .nav-com .right .down-app .right-box p{
+        margin:5px;
+    }
+    .nav-com .right .right-box {
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 70px;
+        border: none;
+        font-size: 14px;
+        animation: down 0.3s;
+    }
+    .nav-com .right .right-box .img-center{
+        width:140px;
+    }
     .nav-com .right .nav-right > li > a{
         height: 50px;
         line-height: 50px;
     }
-    .nav-com .left ol .nav1:first-child > a{
-        left: 10px;
-    }
-    .nav-com .left ol .nav1:nth-child(2) > a{
-        left: 60px;
-    }
-    .nav-com .left .nav-close {
-        top: 7px;
-        right: 0;
-    }
-    .nav-com .left .nav2{
-        width:150px;
-        padding: 100px 0 0 10px;
-        font-size:14px;
-    }
-    .nav-com .left .nav3 {
-        left: 150px;
-        width: 150px;
-        padding: 100px 0 0 10px;
-        font-size: 14px;
-    }
-
     .nav-com .right .nav-right > li:first-child > a{
         right: 30px;
     }
@@ -296,27 +410,52 @@
     .nav-com .right .nav-right > li:nth-child(2) > a{
         right: 10px;
     }
-    .nav-com .right .nav-close {
-        top: 7px;
-        left: 0;
-    }
-    .nav-com .right .right-box {
-        padding-top: 150px;
-        font-size: 14px;
-    }
-    .nav-com .right .right-box.active {
-        padding-top: 70px;
-        width: 70%;
-    }
-    .nav-com .right .right-box.active .img-center{
-        width:80%;
-    }
-    .nav-com .right .search .right-box .form-group{
-        width:95%;
-    }
-    .nav-com .left .nav3 .img-box{
+    
+    .nav-com .right .right-box.active::before {
         display: none;
     }
+    .nav-com .right .right-box.active::after {
+        display: none;
+    }
+    .nav-com .right .search .right-box form {
+        padding: 0 30px;
+    }
+    @keyframes down {
+        0%{transform: translate(0,-100%)}
+        100%{transform: translate(0,0)}
+    }
 
+}
+@media screen  and ( max-width: 1068px ) and (min-width: 765px) {
+    .nav-com .left ol {
+        padding: 48px 0 0 15px;
+    }
+    .nav-com .left ol .nav1{
+        margin-right:15px;
+    }
+    .nav-com .left .nav-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .nav-com .left .nav2{
+        padding: 150px 0 0 15px;
+    }
+    .nav-com .right .nav-close {
+        left: 20px;
+        top:28px;
+    }
+    .nav-com .right .search .right-box form {
+        padding: 0 20px 0;
+    }
+    .nav-com .right .search .right-box form i{
+        transform: translate3d(-200px,0,0);
+    }
+    .nav-com .right .nav-right > li:nth-child(1) > a{
+        right:70px;
+    }
+    .nav-com .right .nav-right > li:nth-child(2) > a{
+        right:30px;
+    }
 }
 

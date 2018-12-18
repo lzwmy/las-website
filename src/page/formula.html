@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>科学配方</title>
+    <meta name="keywords" content="">
+    <meta name="description" content=" ">
+</head>
+<body>
+    <!-- nav -->
+    ${require('html-loader!./common/nav.html')}
+
+    <div class="top-page formula">
+        ${require('html-loader!./common/quality_nav.html')}
+        <h1 class="home-link"><a href="./index.html" title="首页"></a></h1>
+    </div>
+
+    
+    <div class="main formula">
+        <div class="container-fluid">
+            <div class="row row1">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="<%=require('../images/formula_1.jpg')%>" alt="" width="100%" class="shadow-none">
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 t">
+                    <h3>复合性</h3>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 t t1">
+                    <p>以高端独特的品牌形象，设计，包装将我们区分开，坚决走高品质的高端路线，避免与单键对物拼价钱而造成恶性竞争</p>
+                </div>
+            </div>
+            <div class="row row1">
+                <div class="col-md-4 col-sm-4 col-xs-4 t">
+                    <h3>功效性</h3>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 t t1">
+                    <p>以高端独特的品牌形象，设计，包装将我们区分开，坚决走高品质的高端路线，避免与单键对物拼价钱而造成恶性竞争</p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="<%=require('../images/formula_2.jpg')%>" alt="" width="100%" class="shadow-none">
+                </div>
+            </div>
+            <div class="row row1">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="<%=require('../images/formula_3.jpg')%>" alt="" width="100%" class="shadow-none">
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 t">
+                    <h3>协同性</h3>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 t t1">
+                    <p>以高端独特的品牌形象，设计，包装将我们区分开，坚决走高品质的高端路线，避免与单键对物拼价钱而造成恶性竞争</p>
+                </div>
+            </div>
+            <div class="row row1">
+                <div class="col-md-4 col-sm-4 col-xs-4 t">
+                    <h3>稳定性</h3>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 t t1">
+                    <p>以高端独特的品牌形象，设计，包装将我们区分开，坚决走高品质的高端路线，避免与单键对物拼价钱而造成恶性竞争</p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="<%=require('../images/formula_4.jpg')%>" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    ${require('html-loader!./common/footer.html')}
+   
+</body>
+<script>
+        window.onload = function(){
+            var oRow = document.getElementsByClassName("row");
+            var odiv = document.getElementsByClassName("t");
+            var rowH = oRow[0].offsetHeight;
+            for(var i = 0; i < odiv.length; i++){
+                odiv[i].style.height = rowH +"px";
+            }
+        }
+</script>
+
+</html>

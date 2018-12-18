@@ -3,101 +3,110 @@
         {
             "id":1,
             "category":1,
-            "type":"a1",
             "price":280,
             "volume":"800",
-            "title":"氨基酸精华保湿补水精仝液a1",
-            "imgPath":"../images/pro.png",
+            "title":"1氨基酸精华保湿补水精仝液a1",
+            "imgPath":"../images/pro2.jpg",
             "children":[
                 {
-                    "title":"氨基酸精华保湿补水精仝液a-1",
+                    "title":"1-1氨基酸精华保湿补水精仝液a-1",
                     "imgPath":"../images/proshow.jpg"
                 },
                 {
-                    "title":"氨基酸精华保湿补水精仝液a-2",
+                    "title":"1-2氨基酸精华保湿补水精仝液a-2",
                     "imgPath":"../images/proshow.jpg"
+                }
+            ],
+            "details":[
+                {
+                    "title":"氨基酸精华保湿补水精仝液1",
+                    "size":"500g",
+                    "detail":"主要成分：氨基酸/茉莉香/石榴",
+                    "imgPath":"../images/pro_1.jpg"
+                },
+                {
+                    "title":"氨基酸精华保湿补水精仝液2",
+                    "size":"500g",
+                    "detail":"主要成分：氨基酸/茉莉香/石榴",
+                    "imgPath":"../images/pro_1.jpg"
+                },{
+                    "title":"氨基酸精华保湿补水精仝液3",
+                    "size":"500g",
+                    "detail":"主要成分：氨基酸/茉莉香/石榴",
+                    "imgPath":"../images/pro_1.jpg"
                 }
             ]
         },
         {
             "id":2,
             "category":1,
-            "type":"a1",
             "price":2580,
             "volume":"800",
-            "title":"氨基酸精华保湿补水精仝液a1",
-            "imgPath":"../images/pro.png"
+            "title":"2氨基酸精华保湿补水精仝液a1",
+            "imgPath":"../images/pro3.jpg"
         },
         {
             "id":3,
             "category":1,
-            "type":"a1",
             "price":5280,
             "volume":"800",
-            "title":"氨基酸精华保湿补水精仝液a1",
-            "imgPath":"../images/pro.png"
+            "title":"3氨基酸精华保湿补水精仝液a1",
+            "imgPath":"../images/pro2.jpg"
         },
         {
             "id":4,
             "category":1,
-            "type":"a2",
             "price":2810,
             "volume":"800",
-            "title":"氨基酸精华保湿补水精仝液a2",
-            "imgPath":"../images/pro.png"
+            "title":"4氨基酸精华保湿补水精仝液a2",
+            "imgPath":"../images/pro3.jpg"
         },
         {
             "id":5,
             "category":1,
-            "type":"a2",
             "price":200,
             "volume":"800",
-            "title":"氨基酸精华保湿补水精仝液a2",
-            "imgPath":"../images/pro.png"
+            "title":"5氨基酸精华保湿补水精仝液a2",
+            "imgPath":"../images/pro2.jpg"
         },
         {
             "id":6,
             "category":1,
-            "type":"b1",
             "price":200,
             "volume":"800",
-            "title":"氨基酸精华保湿补水精仝液b1",
-            "imgPath":"../images/pro.png"
+            "title":"6氨基酸精华保湿补水精仝液b1",
+            "imgPath":"../images/pro3.jpg"
         },{
             "id":7,
             "category":1,
-            "type":"b1",
             "price":200,
             "volume":"800",
-            "title":"氨基酸精华保湿补水精仝液b1",
-            "imgPath":"../images/pro.png"
+            "title":"7氨基酸精华保湿补水精仝液b1",
+            "imgPath":"../images/pro2.jpg"
         },
         {
             "id":8,
             "category":1,
-            "type":"b1",
             "price":200,
             "volume":"800",
-            "title":"氨基酸精华保湿补水精仝液b1",
-            "imgPath":"../images/pro.png"
+            "title":"8氨基酸精华保湿补水精仝液b1",
+            "imgPath":"../images/pro2.jpg"
         },
         {
             "id":9,
             "category":2,
-            "type":"b1",
             "price":200,
             "volume":"800",
-            "title":"氨基酸精华保湿补水精仝液b1",
-            "imgPath":"../images/pro.png"
+            "title":"9氨基酸精华保湿补水精仝液b1",
+            "imgPath":"../images/pro2.jpg"
         },
         {
             "id":10,
             "category":2,
-            "type":"b2",
             "price":200,
             "volume":"800",
-            "title":"氨基酸精华保湿补水精仝液b2",
-            "imgPath":"../images/pro.png"
+            "title":"10氨基酸精华保湿补水精仝液b2",
+            "imgPath":"../images/pro2.jpg"
         }
     ]
 }
