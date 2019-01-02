@@ -44,30 +44,18 @@ function nav(){
     let oMask = $("#mask_js");
     let oClose = $(".nav-close");
 
-    let oDownBtn = $("#down_btn_js");
-    let oSearchBtn = $("#search_btn_js");
-    let oRightNav = $("#right_js");
-    let oRightUl = $("#right_js .nav-right");
-    let oDownBox = $("#right_js .right-box");
-
-    let oSearchIcon = $("#search_input + .icon");
-    let oSearchInput = $("#search_input");
-    let oSearchContent = $("#search_content");
 
     let top_a = $("#top .home-link"); 
     let top_a_idea = $(".top-page .home-link"); 
-    let timer = null;
 
     let menu_btn = $("#menu_btn");
 
     if (!/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
         oNav2.css({"height":h+"px"})
-        oDownBox.css({"height":h+"px"})
         $(window).resize(function(){
             h = $(window).height();
             w = $(window).width();
             oNav2.css({"height":h+"px"})
-            oDownBox.css({"height":h+"px"})
         })
     }
 
@@ -75,10 +63,7 @@ function nav(){
         top_a.css({"z-index":"0"});
         top_a_idea.css({"z-index":"0"});
         oNav1.addClass("active");
-        $(oSearchBtn).css({"position":"fixed"});
-        $(oDownBtn).css({"position":"fixed"});
         oNav2.removeClass("active");
-        oDownBox.removeClass("active");
         $(this).parent().find(".nav2").addClass("active");
         oClose.addClass("active");
         oMask.addClass("active")
@@ -88,102 +73,26 @@ function nav(){
         top_a.css({"z-index":"21"});
         top_a_idea.css({"z-index":"21"});
         oNav1.removeClass("active");
-        $(oSearchBtn).css({"position":"absolute"});
-        $(oDownBtn).css({"position":"absolute"});
         oNav2.removeClass("active");
         oMask.removeClass("active")
-        oDownBox.removeClass("active");
         oClose.removeClass("active");
-        oSearchIcon.removeClass("active");
     });
 
     oMask.click(function(){
         top_a.css({"z-index":"21"});
         top_a_idea.css({"z-index":"21"});
-        oNav1.removeClass("active");
-        $(oSearchBtn).css({"position":"absolute"});
-        $(oDownBtn).css({"position":"absolute"});
         oNav2.removeClass("active");
         oDownBox.removeClass("active");
         $(this).removeClass("active")
         oClose.removeClass("active");
     });
 
-    oDownBtn.click(function(){
-        top_a.css({"z-index":"0"});
-        top_a_idea.css({"z-index":"0"});
-        $(oSearchBtn).css({"position":"fixed"});
-        $(oDownBtn).css({"position":"fixed"});
-        oNav2.removeClass("active");
-        oDownBox.removeClass("active");
-        $(this).parent().find(".right-box").addClass("active");
-        oMask.addClass("active");
-        oClose.addClass("active");
-    });
-    oSearchBtn.click(function(){
-        top_a.css({"z-index":"0"});
-        top_a_idea.css({"z-index":"0"});
-        $(oSearchBtn).css({"position":"fixed"});
-        $(oDownBtn).css({"position":"fixed"});
-        $(oSearchBtn).html();
-        oNav2.removeClass("active");
-        oDownBox.removeClass("active");
-        $(this).parent().find(".right-box").addClass("active");
-        oMask.addClass("active");
-        oClose.addClass("active");
-        if (!/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
-            oSearchInput.focus();
-        }
-        oSearchIcon.addClass("active");
-    });
+
     oNav2.on("mouseenter","a",function(){
         let bgPath = $(this).attr("data-img");
         $(oNav2_img).attr("src",bgPath);
     });
 
-
-    //搜索框异步查找
-    oSearchInput.on("input",function(e){
-        oSearchContent.empty();
-        let inputValue = $(this).val();
-        if(inputValue==""){
-            let str = `<a href="">洗面奶</a>
-                        <a href="">维生素</a>
-                        <a href="">乳酸饮品</a>`;
-            oSearchContent.append(str);
-        }else{
-            clearTimeout(timer);
-            timer = setTimeout(function(){
-                getData();
-            },120);
-        }
-        function getData(){
-            $.ajax({
-                url: "../data/product.json",
-                type: "get",
-                dataType: "json",
-                success: function(data) {
-                    let newData = data.data.filter(function(item){
-                        if(item.title.indexOf(inputValue) != -1){
-                            return item.title;
-                        }
-                    });
-                    if(newData.length != 0){
-                        newData.forEach((element,index) => {
-                            if(index >= 10){
-                                return;
-                            }
-                            let str = `<a href="proShow.html?id=${element.id}">${element.title}</a>`
-                            oSearchContent.append(str);
-                        });
-                    }else{
-                        let str = `<a href="#">暂无搜索结果!</a>`
-                        oSearchContent.append(str);
-                    }
-                }
-            });
-        }
-    });
 
     //手机端导航按钮
     menu_btn.on("click",function(){

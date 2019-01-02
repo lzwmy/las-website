@@ -48,6 +48,7 @@ img{
     max-width:100%;
 }
 
+
 @media screen and ( max-width: 760px ) {
     #top{
         height: 50px !important;

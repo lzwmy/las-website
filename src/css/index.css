@@ -54,7 +54,6 @@ body{
     float: left;
     padding-left:120px;
     background: #f9f9f9;
-    border-right:1px solid #ccc;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -108,9 +107,10 @@ body{
 }
 
 .main-right{
+    box-shadow: 0 0 5px #ccc;
     float: right;
     transition: all .3s;
-    background: url('../images/home_r.jpg') no-repeat;
+    background: url('../images/home_r1.png') no-repeat;
     background-size: cover;
     border:8px solid #fff;
     box-sizing: border-box;
