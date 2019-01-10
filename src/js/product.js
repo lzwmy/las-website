@@ -1,137 +1,94 @@
-
+import Swiper from '../js/swiper.min.js';
+import "../css/swiper.min.css"
 import "../css/product.css"
-import { resolve } from "path";
+import { resolve } from 'url';
 
-let current = 1;  //当前页
-let pageSize = 2; //当前页大小
-let total = null; //总页数
-let category = 1; //产品类别 
-let oA = $("#main .top-nav a");
+let slidesPerView = 3;
+let navli = $("#main .left-nav");
+let DomSwiper = $("#pro1");
+let swiperH = null;
+let nav = $(".nav-com");
 
-
-// 判断产品类别页
-function GetQueryString(name){
-     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-     var r = window.location.search.substr(1).match(reg);
-     if(r!=null){
-         return  unescape(r[2]); 
-     }else{
-         return null;
-     }
-}
-category = GetQueryString("category");
-getData().then(()=>{
-    page();
-});
-
-
-
-//获取产品数据
-function getData(value){
-    return new Promise((resolve,reject)=>{
-        let content = $("#content");
-        let page = $("#page");
-        current = value?value:current;
-        content.empty();
-        page.children(".page").remove();
-        $.ajax({
-            url: "../data/product.json",
-            type: "get",
-            dataType: "json",
-            success: function(data) {
-                let newData = data.data.filter(function(item){
-                    if(category==null){
-                        return item;
-                    }else{
-                        return item.category == category;
-                    }
-                });
-                $.each(newData, function(i, item) {
-                    let startNum = (current-1) * pageSize;
-                    let endNum = startNum+pageSize;
-                    if(i > startNum-1 && i <= endNum-1){
-                        let str = `<div class="col-md-6 col-sm-6  col-xs-12">
-                                        <div class="pro">
-                                            <a href="proShow.html?id=${item.id}"><img src="${item.imgPath}" alt=""></a> 
-                                            <div class="bottom">
-                                                <p class="text-center">${item.title}</p>
-                                                <p class="text-center">
-                                                    <span>${item.volume} ml</span>
-                                                    <span class="line">|</span>
-                                                    <span>&yen; ${item.price}</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>`;
-                        $(content).append(str);
-                    }
-                });
-                total = Math.ceil(newData.length/pageSize);
-                for(let i = 1; i <= total; i++){
-                    let pageli = `<li class="page ${(i)==current?'active':''}"><a href="#">${i}</a></li>`;
-                    $(page).children(".next").before(pageli);
-                }
-                resolve();
-            }
-        });
+if (!/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
+    $(window).scroll(()=>{
+        if($(window).scrollTop()>100){
+            nav.addClass("fixed");
+        }else{
+            nav.removeClass("fixed");
+        }
     })
-};
-
-//分页点击
-function page(){
-    var oPageUl = $(".pagination");
-    var oPre = $(".pagination .pre");
-    var oNext = $(".pagination .next");
-
-    //判断产品页子类
-    oA.on("click",function(){
-        $(this).parent().addClass("active").siblings().removeClass("active");
-        category = $(this).attr("data-type");
-        current = 1;  
-        getData().then(()=>{
-            upDom();
-        });
-        
-    });
-
-    upDom();
-    oPageUl.on('click','.page',function(){
-        current = parseInt($(this).children("a").text());
-        getData();
-        upDom();
-    });
-    function onPre(){
-        getData(current-1);
-        upDom();
-    };
-    function onNext(){
-        getData(current+1);
-        upDom();
-    };
-    function upDom(){
-        if(current==1){
-            $(oPre).addClass("disabled");
-            $(oPre).children("a").attr("href","javascript:;");
-            $(oPre).off('click');
-        }else{
-            $(oPre).removeClass("disabled");
-            $(oPre).children("a").attr("href","#");
-            $(oPre).off('click');
-            $(oPre).on('click',onPre);
-        }
-        
-        if(current==total){
-            $(oNext).addClass("disabled");
-            $(oNext).children("a").attr("href","javascript:;");
-            $(oNext).off('click');
-        }else{
-            $(oNext).removeClass("disabled");
-            $(oNext).children("a").attr("href","#");
-            $(oNext).off('click');
-            $(oNext).on('click',onNext);
-        }
-    }
 }
 
 
- 
+
+
+window.onload = function(){
+    setTimeout(()=>{
+        swiperH = DomSwiper.height();
+        navli.css({"height":swiperH+"px"});
+  },500)
+}
+
+$(window).resize(function(){
+    setTimeout(()=>{
+        swiperH = DomSwiper.height();
+        navli.css({"height":swiperH+"px"});
+    },200)
+})
+
+getData("pro1",1)
+getData("pro2",2);
+getData("pro3",3);
+getData("pro4",4);
+//获取产品数据
+function getData(dom,category){
+  let content = $("#"+dom);
+  $.ajax({
+      url: "./data/product.json",
+      type: "get",
+      dataType: "json",
+      success: function(data) {
+          let newData = data.data.filter(function(item){
+              return item.category == category;
+          });
+          $.each(newData, function(i, item) {
+              let str = `<div class="swiper-slide">
+                            <div class="pro">
+                                <img src="${item.imgPath}" alt="${item.title}">
+                                <div class="bottom">
+                                    <p class="text-center">${item.title}</p>
+                                    <p class="text-center">
+                                        <span>${item.volume} ml</span>
+                                        <span class="line">|</span>
+                                        <span>&yen; ${item.price}</span>
+                                    </p>
+                                </div>
+                                <div class="box">
+                                    <p class="text-center">${item.title}</p>
+                                    <img src="./images/wx.png" alt="二唯码">
+                                    <p>查看详情-扫码下载商城APP</p>
+                                </div>
+                            </div>
+                        </div>`;
+              $(content).append(str);
+          });
+
+          if (!/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
+            slidesPerView = 3;
+          }else{
+            slidesPerView = 1;
+          }
+          let Swiper1 = new Swiper('.swiper1', {
+              loop :false,
+              slidesPerView : slidesPerView, //可见数
+              spaceBetween : 20,  //间隔
+              observer:true,//修改swiper子元素时，自动初始化swiper
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }
+          });
+          
+      }
+  });
+};

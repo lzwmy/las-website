@@ -14,25 +14,24 @@ module.exports = {
         'index':'./src/js/index.js', 
         'common':'./src/js/common.js', 
         'product':'./src/js/product.js', 
-        'proshow':'./src/js/proshow.js', 
         'join':'./src/js/join.js'
     },
     //输出文件配置
     output:{                
         path: path.resolve(__dirname+'/dist'),
-        filename:'src/js/[name].[hash:8].js',
-        publicPath: '../../'
+        filename:'js/[name].[hash:8].js',
+        publicPath: './'
     },
     //配置webpack插件
     plugins: [
         new CleanWebpackPlugin(pathsToClean),
         new MiniCssExtractPlugin({
-            filename: './src/css/[name].css',
+            filename: 'css/[name].css',
             chunkFilename: '[id].css',
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/index.html',
-            filename: './src/page/index.html',
+            template: './src/index.html',
+            filename: './index.html',
             minify: {
                 collapseWhitespace: true,  //删除空白符与换行符
                 removeComments:true,       //移除HTML中的注释
@@ -44,8 +43,8 @@ module.exports = {
             chunks: ['common','index']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/common/nav.html',
-            filename: './src/page/common/nav.html',
+            template: './src/common/nav.html',
+            filename: './common/nav.html',
             minify: {
                 collapseWhitespace: true,  
                 removeComments:true,       
@@ -56,8 +55,8 @@ module.exports = {
             hash: true,
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/common/about_nav.html',
-            filename: './src/page/common/about_nav.html',
+            template: './src/common/footer.html',
+            filename: './common/footer.html',
             minify: {
                 collapseWhitespace: true,  
                 removeComments:true,       
@@ -68,32 +67,8 @@ module.exports = {
             hash: true,
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/common/quality_nav.html',
-            filename: './src/page/common/quality_nav.html',
-            minify: {
-                collapseWhitespace: true,  
-                removeComments:true,       
-                minifyCSS:true, 
-                minifyJS:true, 
-                minifyURLs:true 
-            },
-            hash: true,
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/page/common/footer.html',
-            filename: './src/page/common/footer.html',
-            minify: {
-                collapseWhitespace: true,  
-                removeComments:true,       
-                minifyCSS:true, 
-                minifyJS:true, 
-                minifyURLs:true 
-            },
-            hash: true,
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/page/product.html',
-            filename: './src/page/product.html',
+            template: './src/product.html',
+            filename: './product.html',
             chunks: ['common','product'],
             minify: {
                 collapseWhitespace: true,  
@@ -105,21 +80,8 @@ module.exports = {
             hash: true,
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/proShow.html',
-            filename: './src/page/proShow.html',
-            chunks: ['common','proshow'],
-            minify: {
-                collapseWhitespace: true,  
-                removeComments:true,       
-                minifyCSS:true, 
-                minifyJS:true, 
-                minifyURLs:true 
-            },
-            hash: true
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/page/story.html',
-            filename: './src/page/story.html',
+            template: './src/story.html',
+            filename: './story.html',
             chunks: ['common'],
             minify: {
                 collapseWhitespace: true,  
@@ -131,8 +93,8 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/life.html',
-            filename: './src/page/life.html',
+            template: './src/life.html',
+            filename: './life.html',
             chunks: ['common'],
             minify: {
                 collapseWhitespace: true,  
@@ -144,8 +106,8 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/worth.html',
-            filename: './src/page/worth.html',
+            template: './src/worth.html',
+            filename: './worth.html',
             chunks: ['common'],
             minify: {
                 collapseWhitespace: true,  
@@ -157,8 +119,8 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/find.html',
-            filename: './src/page/find.html',
+            template: './src/find.html',
+            filename: './find.html',
             chunks: ['common'],
             minify: {
                 collapseWhitespace: true,  
@@ -170,8 +132,8 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/technology.html',
-            filename: './src/page/technology.html',
+            template: './src/technology.html',
+            filename: './technology.html',
             chunks: ['common'],
             minify: {
                 collapseWhitespace: true,  
@@ -183,8 +145,8 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/formula.html',
-            filename: './src/page/formula.html',
+            template: './src/formula.html',
+            filename: './formula.html',
             chunks: ['common'],
             minify: {
                 collapseWhitespace: true,  
@@ -196,8 +158,8 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/quality.html',
-            filename: './src/page/quality.html',
+            template: './src/quality.html',
+            filename: './quality.html',
             chunks: ['common'],
             minify: {
                 collapseWhitespace: true,  
@@ -209,8 +171,8 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/develop.html',
-            filename: './src/page/develop.html',
+            template: './src/develop.html',
+            filename: './develop.html',
             chunks: ['common'],
             minify: {
                 collapseWhitespace: true,  
@@ -222,8 +184,8 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/contact.html',
-            filename: './src/page/contact.html',
+            template: './src/contact.html',
+            filename: './contact.html',
             chunks: ['common'],
             minify: {
                 collapseWhitespace: true,  
@@ -235,8 +197,8 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/join.html',
-            filename: './src/page/join.html',
+            template: './src/join.html',
+            filename: './join.html',
             chunks: ['common',"join"],
             minify: {
                 collapseWhitespace: true,  
@@ -269,9 +231,9 @@ module.exports = {
                 test: /\.css$/,
                 use: [{
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            publicPath: './'
-                        },
+                        // options: {
+                        //     publicPath: 'dist/'
+                        // },
                     },
                     'css-loader',
                     'postcss-loader'
@@ -282,9 +244,8 @@ module.exports = {
                 test: /\.(png|gif|jpeg|jpg|ttf)$/,
                 loader: 'url-loader',
                 options: {
-                    limit:10000,
-                    name:'src/images/[name].[ext]',
-                    publicPath: '../../'
+                    limit:10000000,
+                    name:'images/[name].[ext]',
                 }
             },
             {
@@ -292,7 +253,7 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                   limit: 10000,
-                  name: 'src/fonts/[name].[hash:8].[ext]'
+                  name: 'fonts/[name].[hash:8].[ext]'
                 }
             }
         ]

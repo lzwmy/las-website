@@ -8,7 +8,6 @@ module.exports = {
         'index':'./src/js/index.js', 
         'common':'./src/js/common.js', 
         'product':'./src/js/product.js', 
-        'proshow':'./src/js/proshow.js', 
         'join':'./src/js/join.js'
     },
     output:{               
@@ -23,81 +22,75 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             //模板文件
-            template: './src/page/index.html',
+            template: './src/index.html',
             //输出文件名字
-            filename: './src/page/index.html',
+            filename: './src/index.html',
             hash: true,
             chunks: ['common','index']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/product.html',
-            filename: './src/page/product.html',
+            template: './src/product.html',
+            filename: './src/product.html',
             hash: true,
             chunks: ['common','product']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/proShow.html',
-            filename: './src/page/proShow.html',
-            hash: true,
-            chunks: ['common','proshow']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/page/story.html',
-            filename: './src/page/story.html',
+            template: './src/story.html',
+            filename: './src/story.html',
             hash: true,
             chunks: ['common']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/life.html',
-            filename: './src/page/life.html',
+            template: './src/life.html',
+            filename: './src/life.html',
             hash: true,
             chunks: ['common']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/contact.html',
-            filename: './src/page/contact.html',
+            template: './src/contact.html',
+            filename: './src/contact.html',
             hash: true,
             chunks: ['common']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/join.html',
-            filename: './src/page/join.html',
+            template: './src/join.html',
+            filename: './src/join.html',
             hash: true,
             chunks: ['common',"join"]
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/worth.html',
-            filename: './src/page/worth.html',
+            template: './src/worth.html',
+            filename: './src/worth.html',
             hash: true,
             chunks: ['common']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/develop.html',
-            filename: './src/page/develop.html',
+            template: './src/develop.html',
+            filename: './src/develop.html',
             hash: true,
             chunks: ['common']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/find.html',
-            filename: './src/page/find.html',
+            template: './src/find.html',
+            filename: './src/find.html',
             hash: true,
             chunks: ['common']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/technology.html',
-            filename: './src/page/technology.html',
+            template: './src/technology.html',
+            filename: './src/technology.html',
             hash: true,
             chunks: ['common']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/formula.html',
-            filename: './src/page/formula.html',
+            template: './src/formula.html',
+            filename: './src/formula.html',
             hash: true,
             chunks: ['common']
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/quality.html',
-            filename: './src/page/quality.html',
+            template: './src/quality.html',
+            filename: './src/quality.html',
             hash: true,
             chunks: ['common']
         }),

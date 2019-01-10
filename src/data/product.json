@@ -1,112 +1,116 @@
 {
     "data":[
         {
-            "id":1,
             "category":1,
             "price":280,
             "volume":"800",
             "title":"1氨基酸精华保湿补水精仝液a1",
-            "imgPath":"../images/pro2.jpg",
-            "children":[
-                {
-                    "title":"1-1氨基酸精华保湿补水精仝液a-1",
-                    "imgPath":"../images/proshow.jpg"
-                },
-                {
-                    "title":"1-2氨基酸精华保湿补水精仝液a-2",
-                    "imgPath":"../images/proshow.jpg"
-                }
-            ],
-            "details":[
-                {
-                    "title":"氨基酸精华保湿补水精仝液1",
-                    "size":"500g",
-                    "detail":"主要成分：氨基酸/茉莉香/石榴",
-                    "imgPath":"../images/pro_1.jpg"
-                },
-                {
-                    "title":"氨基酸精华保湿补水精仝液2",
-                    "size":"500g",
-                    "detail":"主要成分：氨基酸/茉莉香/石榴",
-                    "imgPath":"../images/pro_1.jpg"
-                },{
-                    "title":"氨基酸精华保湿补水精仝液3",
-                    "size":"500g",
-                    "detail":"主要成分：氨基酸/茉莉香/石榴",
-                    "imgPath":"../images/pro_1.jpg"
-                }
-            ]
+            "imgPath":"./images/1-1.png"
         },
         {
-            "id":2,
             "category":1,
-            "price":2580,
+            "price":280,
             "volume":"800",
-            "title":"2氨基酸精华保湿补水精仝液a1",
-            "imgPath":"../images/pro3.jpg"
+            "title":"1氨基酸精华保湿补水精仝液a2",
+            "imgPath":"./images/1-2.png"
         },
         {
-            "id":3,
             "category":1,
-            "price":5280,
+            "price":280,
             "volume":"800",
-            "title":"3氨基酸精华保湿补水精仝液a1",
-            "imgPath":"../images/pro2.jpg"
+            "title":"1氨基酸精华保湿补水精仝液a3",
+            "imgPath":"./images/1-3.png"
         },
         {
-            "id":4,
             "category":1,
-            "price":2810,
+            "price":280,
             "volume":"800",
-            "title":"4氨基酸精华保湿补水精仝液a2",
-            "imgPath":"../images/pro3.jpg"
+            "title":"1氨基酸精华保湿补水精仝液a4",
+            "imgPath":"./images/1-4.png"
         },
         {
-            "id":5,
-            "category":1,
-            "price":200,
-            "volume":"800",
-            "title":"5氨基酸精华保湿补水精仝液a2",
-            "imgPath":"../images/pro2.jpg"
-        },
-        {
-            "id":6,
-            "category":1,
-            "price":200,
-            "volume":"800",
-            "title":"6氨基酸精华保湿补水精仝液b1",
-            "imgPath":"../images/pro3.jpg"
-        },{
-            "id":7,
-            "category":1,
-            "price":200,
-            "volume":"800",
-            "title":"7氨基酸精华保湿补水精仝液b1",
-            "imgPath":"../images/pro2.jpg"
-        },
-        {
-            "id":8,
-            "category":1,
-            "price":200,
-            "volume":"800",
-            "title":"8氨基酸精华保湿补水精仝液b1",
-            "imgPath":"../images/pro2.jpg"
-        },
-        {
-            "id":9,
             "category":2,
-            "price":200,
+            "price":280,
             "volume":"800",
-            "title":"9氨基酸精华保湿补水精仝液b1",
-            "imgPath":"../images/pro2.jpg"
+            "title":"1氨基酸精华保湿补水精仝液a21",
+            "imgPath":"./images/2-1.png"
         },
         {
-            "id":10,
             "category":2,
-            "price":200,
+            "price":280,
             "volume":"800",
-            "title":"10氨基酸精华保湿补水精仝液b2",
-            "imgPath":"../images/pro2.jpg"
+            "title":"1氨基酸精华保湿补水精仝液a22",
+            "imgPath":"./images/2-2.png"
+        },
+        {
+            "category":2,
+            "price":280,
+            "volume":"800",
+            "title":"1氨基酸精华保湿补水精仝液a21",
+            "imgPath":"./images/2-3.png"
+        },
+        {
+            "category":2,
+            "price":280,
+            "volume":"800",
+            "title":"1氨基酸精华保湿补水精仝液a22",
+            "imgPath":"./images/2-4.png"
+        },
+        {
+            "category":3,
+            "price":280,
+            "volume":"800",
+            "title":"1氨基酸精华保湿补水精仝液a21",
+            "imgPath":"./images/3-1.png"
+        },
+        {
+            "category":3,
+            "price":280,
+            "volume":"800",
+            "title":"1氨基酸精华保湿补水精仝液a22",
+            "imgPath":"./images/3-2.png"
+        },
+        {
+            "category":3,
+            "price":280,
+            "volume":"800",
+            "title":"1氨基酸精华保湿补水精仝液a21",
+            "imgPath":"./images/3-3.png"
+        },
+        {
+            "category":3,
+            "price":280,
+            "volume":"800",
+            "title":"1氨基酸精华保湿补水精仝液a22",
+            "imgPath":"./images/3-4.png"
+        },
+        {
+            "category":4,
+            "price":280,
+            "volume":"800",
+            "title":"1氨基酸精华保湿补水精仝液a21",
+            "imgPath":"./images/4-1.png"
+        },
+        {
+            "category":4,
+            "price":280,
+            "volume":"800",
+            "title":"1氨基酸精华保湿补水精仝液a22",
+            "imgPath":"./images/4-2.png"
+        },
+        {
+            "category":4,
+            "price":280,
+            "volume":"800",
+            "title":"1氨基酸精华保湿补水精仝液a21",
+            "imgPath":"./images/4-3.png"
+        },
+        {
+            "category":4,
+            "price":280,
+            "volume":"800",
+            "title":"1氨基酸精华保湿补水精仝液a22",
+            "imgPath":"./images/4-4.png"
         }
     ]
 }

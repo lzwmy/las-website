@@ -87,7 +87,7 @@ function nav(){
         oClose.removeClass("active");
     });
 
-
+    //更换图片
     oNav2.on("mouseenter","a",function(){
         let bgPath = $(this).attr("data-img");
         $(oNav2_img).attr("src",bgPath);
@@ -113,27 +113,6 @@ function nav(){
         
     })
     //激活当前nav
-    $(".top-page li a").each(function(){ 
-        let $this = $(this); 
-	    if($this[0].href==String(window.location)){ 
-	        $this.parent().addClass("active").siblings().removeClass("active"); 
-        }
-    }); 
-    $(".top-nav li").each(function(){ 
-        let $this = $(this); 
-        let proli = $this.children("a").attr("data-type");
-        let url = window.location.search;
-	    if($this[0].href==String(window.location)){ 
-            $this.parent().addClass("active").siblings().removeClass("active"); 
-        }
-        if(!proli){
-            proli = 0;
-        }
-        if(url.charAt(url.length-1)==proli){
-            $this.addClass("active").siblings().removeClass("active");
-        }
-    }); 
-
     let oNav1_li = $("#nav_js .nav1");
     let urlPath = window.location.pathname;
     let eq = 99;

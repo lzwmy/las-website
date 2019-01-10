@@ -67,7 +67,7 @@
     width:100%;
     height:3px;
     display:block;
-    background:url('../images/top_line.png') top;
+    background:url('../images/line.png') top;
 }
 .top-page.contact .home-link,
 .top-page.join .home-link{
@@ -393,7 +393,7 @@
     background: rgba(255, 255, 255, 0.5);
 }
 .main.formula .row div.t1{
-    padding:0 135px;
+    padding:0 6%;
     background: rgba(255, 255, 255, 0.8);
 }
 
@@ -442,14 +442,16 @@
     padding-left:100px;
 }
 .main.join .cont1 .wrap,
-.main.join .cont2 .wrap{
+.main.join .cont2 .wrap,
+.main.join .cont3 .wrap{
     display: none;
 }
 .main.join .cont1 .wrap.active,
-.main.join .cont2 .wrap.active{
+.main.join .cont2 .wrap.active,
+.main.join .cont3 .wrap.active{
     display: block;
 }
-.main.join .cont2+a{
+.main.join .cont3+a{
     margin-top:30px;
     margin-left:100px;
     display: inline-block;
@@ -466,29 +468,60 @@
 .main.join .row2{
     margin:50px 0 200px;
 }
+@media screen  and ( max-width: 1068px ) and (min-width: 765px) {
+    .main {
+        padding: 30px 15px;
+    }
+    .main .row > div{
+        padding:0 15px;
+        margin-bottom:35px;
+    }
+    .main.formula .row div.t1 p {
+        font-size: 14px;
+        line-height: 24px;
+        padding:15px;
+    }
+    .main .row {
+        margin-top: 50px;
+    }
+    .main h3{
+        font-size:18px !important;
+        margin-bottom:10px;
+    }
+    .main p{
+        font-size:14px !important;
+        line-height: 25px;
+    }
+    .main.contact .row2 p {
+        line-height: 2.4;
+    }
+    .main.technology .row1 p {
+        margin: 0;
+        padding: 60px 15px;
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
 
 @media screen and ( max-width: 768px ) {
+    .main .a-more{
+        line-height: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
     .top-page{
         height: 180px !important;
+    }
+    .top-page.contact,
+    .top-page.join{
+        height: 80px !important;
+    }
+    .top-page.contact::before,
+    .top-page.join::before{
+        display: none;
     }
     .top-page::before{
         height: 2px;
         opacity: 0.7;
-    }
-    .top-page nav ul{
-        padding:190px 10px 0;
-        height: 100%;
-    }
-    .top-page nav li,
-    .top-page nav li i{
-        margin-right:10px !important;
-    }
-    .top-page nav li a{
-        font-size:14px;
-    }
-    .top-page nav li.active a {
-        border-bottom: 1px solid #4e6142;
-        padding-bottom: 0;
     }
     .top-page .home-link{
         top:130px;
@@ -598,7 +631,10 @@
         background-size:100%; 
     }
    
-    
+    .main.quality .row1,
+    .main.find .row1{
+        height: 200px;
+    }
    
     .main.story .row2 h3{
         margin:15px 0;
@@ -670,18 +706,9 @@
     .main.formula .container-fluid{
         margin-top:20px;
     }
-    .main.formula .row1{
-        height: 160px;
-    }
-    .main.formula .row img{
-        height: 160px;
-    }
+
     .main.formula .row div.t1{
-        padding:5px;
-    }
-    .main.formula .row div.t1 p{
-        font-size:12px;
-        line-height: 16px;
+        padding:15px;
     }
     /* 核心技术 */
     .main.quality .row1 > div:last-child{
@@ -690,7 +717,7 @@
     /* 加入我们 */
     .top-page.contact .home-link,
     .top-page.join .home-link{
-        top: 130px;
+        top: 32px;
     }
     .top-page.join::before{
         display: none;
@@ -717,7 +744,7 @@
     .main.join .cont2{
         padding-left:30px;
     }
-    .main.join .cont2+a {
+    .main.join .cont3+a {
         margin-left: 30px;
         line-height: 50px;
         width: 80%;
@@ -726,23 +753,3 @@
 
 }
 
-@media screen  and ( max-width: 1068px ) and (min-width: 765px) {
-    .top-page nav ul {
-        padding: 100px 10px 0;
-    }
-    .main .row > div{
-        padding:0 15px;
-        margin-bottom:0;
-    }
-    .main.formula .row1{
-        height: 260px;
-    }
-    .main.formula .row img{
-        height: 260px;
-    }
-    .main.formula .row div.t1 p {
-        font-size: 14px;
-        line-height: 24px;
-        padding:15px;
-    }
-}

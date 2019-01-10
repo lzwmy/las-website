@@ -19,12 +19,12 @@ if(window.name == null || window.name == ""){
     let oLeftImgT = oRightImg.height()/2+oRightImg.offset().top;
     oLeftImg.css({"right": w-oRightImgW+"px","top":oLeftImgT+"px"});
 
-    //首屏动画
+    //首屏动画1.8秒
     setTimeout(()=>{
         oLeftImg.addClass("active");
         oLeftImg.css({"right": oRightImgW/2+"px"})
         oWrap.addClass("active");
-    },1000);
+    },1800);
 }else{
     $("#start_js").css("display","none");
 }
