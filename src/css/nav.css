@@ -39,7 +39,7 @@
     left:0;
     width: 100%;
     height: 100%;
-    padding:48px 0 0 120px;
+    padding:48px 0 0 6vw;
     z-index: 20;
 }
 .nav-com .left ol.active{
@@ -48,6 +48,9 @@
 .nav-com .left ol .nav1{
     display: inline-block;
     margin-right:3%;
+}
+.nav-com .left ol .nav1:nth-child(5){
+    margin-right:0;
 }
 .nav-com .left ol .nav1 > a{
     position: relative;
@@ -82,7 +85,7 @@
     bottom:0;
     width:50%;
     background: #e4dbd4;
-    padding:150px 0 0 120px;
+    padding:150px 0 0 6vw;
     font-size:16px;
     box-sizing: border-box;
     z-index: -1;

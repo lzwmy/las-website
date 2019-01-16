@@ -52,7 +52,7 @@ body{
 
 .main-left {
     float: left;
-    padding-left:120px;
+    padding-left:6vw;
     background: #f9f9f9;
     box-sizing: border-box;
     overflow: hidden;
@@ -110,7 +110,7 @@ body{
     box-shadow: 0 0 5px #ccc;
     float: right;
     transition: all .3s;
-    background: url('../images/home_r1.png') no-repeat;
+    background: url('../images/home_r1.jpg') no-repeat;
     background-size: cover;
     border:8px solid #fff;
     box-sizing: border-box;
@@ -119,8 +119,8 @@ body{
     display: inline-block;
     margin:0;
     color:transparent;
-    width: 160px;
-    height: 160px;
+    width: 9vw;
+    height: 9vw;
     border-radius: 50%;
     background: #e4dcd4 url('../images/logo.png') no-repeat center center;
     background-size:65%;
@@ -131,15 +131,15 @@ body{
 }
 .main-right::before{
     content:"";
-    width:176px;
-    height: 176px;
+    width:9.8vw;
+    height: 9.8vw;
     border-radius: 50%;
     background: #fff;
     position: absolute;
     top:50%;
     left:0px;
     transform: translate(-50%,-50%);
-    clip:rect(auto,auto,auto,81px);
+    clip:rect(auto,auto,auto,4.5vw);
 }
 
 

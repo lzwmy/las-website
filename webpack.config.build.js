@@ -9,7 +9,6 @@ let pathsToClean = [
 ]
 
 module.exports = {
-    // 入口
     entry:{
         'index':'./src/js/index.js', 
         'common':'./src/js/common.js', 
@@ -244,7 +243,7 @@ module.exports = {
                 test: /\.(png|gif|jpeg|jpg|ttf)$/,
                 loader: 'url-loader',
                 options: {
-                    limit:10000000,
+                    limit:10000,
                     name:'images/[name].[ext]',
                 }
             },

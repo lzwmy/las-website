@@ -2,14 +2,15 @@
     width: 100%;
     height: 100px;
     background: #f9f9f9;
+    position: relative;
 }
 #top .home-link{
-    width: 300px;
-    height: 100px;
+    width:15vw;
+    height: 6vw;
     margin:0;
     position: absolute;
     left:50%;
-    top:0;
+    bottom:0;
     transform: translate(-50%,0);
     background: url('../images/pro_top.png') no-repeat center bottom;
     background-size: 100%;
@@ -193,11 +194,6 @@
     }
     #top{
         height: 80px;
-    }
-    #top .home-link {
-        width: 180px;
-        height: 80px;
-        background-size: 100%;
     }
     .nav-com.fixed + #top .home-link{
         top:80px;
