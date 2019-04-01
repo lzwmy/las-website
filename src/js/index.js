@@ -10,22 +10,21 @@ let oRightImgW  = null;
 let oRight = $(".main-right");
 
 
-if(!window.sessionStorage.getItem('name')){
+if(!window.sessionStorage.getItem('name') && !/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)){
     window.sessionStorage.setItem('name','olomi');
-    if (!/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
-        oRightImgW = oRightImg.width();
-    }else{
-        oRightImgW = oRightImg.width()/2;
-    }
+   
+    oRightImgW = oRightImg.width();
     let oLeftImgT = oRightImg.height()/2+oRightImg.offset().top;
     oLeftImg.css({"right": w-oRightImgW+"px","top":oLeftImgT+"px"});
-
+    
     //首屏动画1.4秒
-    setTimeout(()=>{
-        oLeftImg.addClass("active");
-        oLeftImg.css({"right": oRightImgW/2+"px"})
-        oWrap.addClass("active");
-    },1400);
+    $(document).ready(()=>{
+        setTimeout(()=>{
+            oLeftImg.addClass("active");
+            oLeftImg.css({"right": oRightImgW/2+"px"})
+            oWrap.addClass("active");
+        },1400);
+    })
 }else{
     $("#start_js").css("display","none");
 }

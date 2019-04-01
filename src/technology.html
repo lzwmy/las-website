@@ -23,12 +23,12 @@
         <div class="container-fluid">
             <div class="row row1">
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="img1">
                         <img src="<%=require('./images/tech_1.jpg')%>" alt="" class="shadow-none" data-scroll-reveal="enter left and move 50px over 0.5s">
                         <h3>萃取</h3>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter right and move 50px over 0.5s">
-                        <p>利用物质在两种互不相溶（或微溶）的溶剂中溶解度或分配系数的不同，使物质从一种溶剂内转移到另外一种溶剂中。经过反复多次萃取，将绝大部分的化合物提取出来。</p>
+                        <p class="cont-text">利用物质在两种互不相溶（或微溶）的溶剂中溶解度或分配系数的不同，使物质从一种溶剂内转移到另外一种溶剂中。经过反复多次萃取，将绝大部分的化合物提取出来。</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
@@ -37,16 +37,16 @@
                         <h3>发酵</h3>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter top and move 50px over 0.5s">
-                        <p>借助微生物在有氧或无氧条件下的生命活动来制备微生物菌体本身、或者直接代谢产物或次级代谢产物。</p>
+                        <p class="cont-text">借助微生物在有氧或无氧条件下的生命活动来制备微生物菌体本身、或者直接代谢产物或次级代谢产物。</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <img src="<%=require('./images/tech_3.jpg')%>" alt="" class="shadow-none" data-scroll-reveal="enter right and move 50px over 0.5s">
                         <h3>小分子</h3>
-                    </div>
+                    </div> 
                     <div class="col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left and move 50px over 0.5s">
-                        <p>具有生物活性的小肽、寡肽、寡糖、寡核苷酸、维生素、矿物质小分子团水、植物次生代谢产物及其降解产物如苷元、黄胴元、甙元、生物碱等。</p>
+                        <p class="cont-text">具有生物活性的小肽、寡肽、寡糖、寡核苷酸、维生素、矿物质小分子团水、植物次生代谢产物及其降解产物如苷元、黄胴元、甙元、生物碱等。</p>
                     </div>
                 </div>
             </div>
@@ -58,4 +58,19 @@
     ${require('html-loader!./common/footer.html')}
    
 </body>
+<script>
+    //内容块高度一致
+    var h = document.getElementById("img1").offsetHeight;
+    var cont = document.getElementsByClassName("cont-text");
+    setHeight();
+    function setHeight(){
+        for (let i = 0; i < cont.length; i++) {
+            cont[i].style.height =  h + 'px';
+        }
+    }
+    window.onresize = function(){
+        h = document.getElementById("img1").offsetHeight;
+        setHeight();
+    };
+</script>
 </html>

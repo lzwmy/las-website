@@ -27,7 +27,7 @@ body{
 .wrap-start .left-img,
 .wrap-start .right-img{
     position: absolute;
-    transition: right 1.5s;
+    transition: right 1s;
 }
 .wrap-start .right-img{
     top:110px;
@@ -87,7 +87,7 @@ body{
 
 .main-left .t h4{
     transition: all 0.5s;
-    font-size:20px;
+    font-size:1vw;
     color:#999;
     font-weight: normal;
 }
@@ -111,7 +111,7 @@ body{
     float: right;
     transition: all .3s;
     background: url('../images/home_r1.jpg') no-repeat;
-    background-size: cover;
+    background-size: 100%;
     border:8px solid #fff;
     box-sizing: border-box;
 }
